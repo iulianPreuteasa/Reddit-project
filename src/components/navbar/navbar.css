@@ -1,0 +1,7 @@
+.nav {
+    background: var(--color-nav);
+
+}
+button {
+    background: var(--color-bg-btn);
+}
