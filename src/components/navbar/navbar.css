@@ -1,7 +1,80 @@
 .nav {
-    background: var(--color-nav);
-
+  background: var(--color-nav);
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }
 button {
-    background: var(--color-bg-btn);
+  background: var(--color-bg-btn);
+}
+
+.search {
+  background: var(--color-nav);
+}
+
+.searchBar {
+  width: 300px;
+  margin: 0.5rem;
+  border-radius: 50px;
+  padding: 0.5rem;
+}
+/* logo css */
+
+.logoNav {
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  width: 2.5rem;
+  height: auto;
+  margin: 1rem;
+}
+
+.titleNav {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}
+
+/* Side Menu */
+
+.sideMenu {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 2.5rem;
+  border-radius: 30px 30px 30px 30px;
+  border: 1px solid black;
+  background: rgba(242, 242, 242, 0.35);
+}
+
+/* Button */
+
+.searchButton {
+  border-radius: 50px;
+  padding: 0.5rem;
+  color: var(--color-white);
+  width: 100px;
+}
+
+/* Mediq Query */
+@media only screen and (max-width: 680px) {
+  .titleNav {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
 }
