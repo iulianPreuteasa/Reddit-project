@@ -6,11 +6,16 @@ const NavBar = () => {
   return (
     <div className="nav">
       <logo className="logoNav">
-        <img src={logo} className="logoImg"/>
+        <img src={logo} className="logoImg" />
         <h4 className="titleNav">Reddit Iulian</h4>
       </logo>
       <searchbar className="search">
-        <input type="search" className="searchBar" id="searchBar" placeholder="Find an articole"/>
+        <input
+          type="search"
+          className="searchBar"
+          id="searchBar"
+          placeholder="Find an article"
+        />
         <button className="searchButton"> Search</button>
       </searchbar>
       <sideMenu className="sideMenu">
