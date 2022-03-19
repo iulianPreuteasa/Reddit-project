@@ -1,68 +1,24 @@
 import React from "react";
-import { loremIpsum, Avatar } from "react-lorem-ipsum";
 import "./main.css";
-import cocacola from "../../Images/main/coca.jpg";
+import { useEffect, useState } from "react";
+
 const Main = () => {
+  const [article, setArticle] = useState([]);
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    const response = await fetch("https://www.reddit.com/r/popular.json");
+    const data = await response.json();
+    setArticle(data.data.children);
+    console.log(data.data.children);
+  };
   return (
     <>
       <div className="container">
-        <div className="articles">
-          <div className="article">
-            <h4 className="title">
-              Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
-              fringilla lacus nec metus bibendum egestas.
-            </h4>
-            <img className="imgArticle" src={cocacola} />
-            <div className="comments">
-              <p className="comment">{loremIpsum()}</p>
-              <button className="expandComments">Expand comments</button>
-            </div>
-          </div>
-          <div className="article">
-            <h4 className="title">
-              Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
-              fringilla lacus nec metus bibendum egestas.
-            </h4>
-            <img className="imgArticle" src={cocacola} />
-            <div className="comments">
-              <p className="comment">{loremIpsum()}</p>
-              <button className="expandComments">Expand comments</button>
-            </div>
-          </div>
-          <div className="article">
-            <h4 className="title">
-              Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
-              fringilla lacus nec metus bibendum egestas.
-            </h4>
-            <img className="imgArticle" src={cocacola} />
-            <div className="comments">
-              <p className="comment">{loremIpsum()}</p>
-              <button className="expandComments">Expand comments</button>
-            </div>
-          </div>
-          <div className="article">
-            <h4 className="title">
-              Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
-              fringilla lacus nec metus bibendum egestas.
-            </h4>
-            <img className="imgArticle" src={cocacola} />
-            <div className="comments">
-              <p className="comment">{loremIpsum()}</p>
-              <button className="expandComments">Expand comments</button>
-            </div>
-          </div>
-          <div className="article">
-            <h4 className="title">
-              Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus
-              fringilla lacus nec metus bibendum egestas.
-            </h4>
-            <img className="imgArticle" src={cocacola} />
-            <div className="comments">
-              <p className="comment">{loremIpsum()}</p>
-              <button className="expandComments">Expand comments</button>
-            </div>
-          </div>
-        </div>
+        <div className="articles"></div>
       </div>
     </>
   );
