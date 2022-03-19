@@ -1,6 +1,4 @@
 import React from "react";
-import { loremIpsum } from "react-lorem-ipsum";
-import cocacola from "../../Images/main/coca.jpg";
 
 export const Article = (props) => {
   return (
@@ -9,7 +7,7 @@ export const Article = (props) => {
         <h4 className="title">{props.article.title}</h4>
         <img className="imgArticle" src={props.article.url} alt="" />
         <div className="comments">
-          <p className="comment"> {props.article.comment}</p>
+          <p className="comment"> {props.article.permalink}</p>
 
           <button className="expandComments">Expand comments</button>
           <votes className="votes">
