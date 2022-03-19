@@ -1,6 +1,7 @@
 import React from "react";
 import "./main.css";
 import { useEffect, useState } from "react";
+import { Article } from "../../features/Main/Article";
 
 const Main = () => {
   const [article, setArticle] = useState([]);
@@ -18,7 +19,10 @@ const Main = () => {
   return (
     <>
       <div className="container">
-        <div className="articles"></div>
+        <div className="articles">
+          <Article />
+          <Article />
+        </div>
       </div>
     </>
   );
