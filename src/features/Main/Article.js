@@ -7,9 +7,10 @@ export const Article = (props) => {
     <>
       <div className="article">
         <h4 className="title">{props.article.title}</h4>
-        <img className="imgArticle" src={props.article.url} alt="cocacola" />
+        <img className="imgArticle" src={props.article.url} alt="" />
         <div className="comments">
-          <p className="comment"> {props.article.ups}</p>
+          <p className="comment"> {props.article.comment}</p>
+
           <button className="expandComments">Expand comments</button>
           <votes className="votes">
             <div> Likes: {props.article.ups}</div>
