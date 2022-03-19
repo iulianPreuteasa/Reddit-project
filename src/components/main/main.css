@@ -43,6 +43,11 @@
   margin: 0.3rem;
 }
 
+.votes {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
 /* Mediq Query Tablets*/
 @media only screen and (max-width: 1024px) {
   .articles {

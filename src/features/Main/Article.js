@@ -2,18 +2,22 @@ import React from "react";
 import { loremIpsum } from "react-lorem-ipsum";
 import cocacola from "../../Images/main/coca.jpg";
 
-export const Article = () => {
+export const Article = (props) => {
   return (
     <>
       <div className="article">
-        <h4 className="title">
-          Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
-          lacus nec metus bibendum egestas.
-        </h4>
-        <img className="imgArticle" src={cocacola} />
+        <h4 className="title">{props.article.title}</h4>
+        <img className="imgArticle" src={props.article.url} alt="cocacola" />
         <div className="comments">
-          <p className="comment">{loremIpsum()}</p>
+          <p className="comment"> {props.article.ups}</p>
           <button className="expandComments">Expand comments</button>
+          <votes className="votes">
+            <div> Likes: {props.article.ups}</div>
+            <div>
+              Unlikes:
+              {props.article.downs}
+            </div>
+          </votes>
         </div>
       </div>
     </>

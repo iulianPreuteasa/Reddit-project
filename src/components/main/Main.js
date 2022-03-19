@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Article } from "../../features/Main/Article";
 
 const Main = () => {
-  const [article, setArticle] = useState([]);
+  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     loadData();
@@ -13,15 +13,18 @@ const Main = () => {
   const loadData = async () => {
     const response = await fetch("https://www.reddit.com/r/popular.json");
     const data = await response.json();
-    setArticle(data.data.children);
+    setArticles(data.data.children);
     console.log(data.data.children);
   };
   return (
     <>
       <div className="container">
         <div className="articles">
-          <Article />
-          <Article />
+          {articles !== null
+            ? articles.map((article, index) => (
+                <Article key={index} article={article.data} />
+              ))
+            : ""}
         </div>
       </div>
     </>
