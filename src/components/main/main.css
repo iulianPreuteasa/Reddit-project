@@ -9,6 +9,7 @@
 }
 
 .article {
+ 
   background: var(--color-primary);
   margin: 10px;
   text-align: center;
@@ -21,6 +22,7 @@
 }
 
 .imgArticle {
+  
   width: 200px;
   padding: 0.3rem;
   margin: 20px auto;
