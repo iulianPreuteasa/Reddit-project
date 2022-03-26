@@ -18,7 +18,7 @@ const NavBar = () => {
         />
         <button className="searchButton"> Search</button>
       </searchbar>
-      <sideMenu className="sideMenu">
+      <div className="sideMenu">
         <h2>title 1</h2>
         <h2>title 2</h2>
         <h2>title 3</h2>
@@ -26,7 +26,7 @@ const NavBar = () => {
         <h2>title 5</h2>
         <h2>title 6</h2>
         <h2>title 7</h2>
-      </sideMenu>
+      </div>
     </div>
   );
 };
