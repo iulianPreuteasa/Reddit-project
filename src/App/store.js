@@ -1,8 +1,8 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { loadArticles } from "../components/main/mainSlice";
+import loadReducer from "../components/main/mainSlice";
 
-export const store = configureStore({
+export default configureStore({
   reducer: {
-    articles: loadArticles,
+    articles: loadReducer,
   },
 });

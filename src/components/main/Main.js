@@ -1,8 +1,11 @@
 import React from "react";
 import "./main.css";
 import { Article } from "../../features/Main/Article";
+import { useSelector } from "react-redux";
+import { selectArticles } from "./mainSlice";
 
 const Main = () => {
+  const articles = useSelector(selectArticles);
   return (
     <>
       <div className="container">
@@ -12,7 +15,6 @@ const Main = () => {
                 <Article key={index} article={article.data} />
               ))
             : ""} */}
-          {/* {state.articles.data} */}
         </div>
       </div>
     </>
