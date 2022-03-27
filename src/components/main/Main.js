@@ -6,6 +6,8 @@ import { selectArticles } from "./mainSlice";
 
 const Main = () => {
   const articles = useSelector(selectArticles);
+
+  console.log(articles);
   return (
     <>
       <div className="container">

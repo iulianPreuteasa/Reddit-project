@@ -7,7 +7,7 @@ const loadData = async () => {
   return data.data.children;
 };
 
-console.log(loadData());
+// console.log(loadData());
 
 export const loadArticles = createSlice({
   name: "articles",
